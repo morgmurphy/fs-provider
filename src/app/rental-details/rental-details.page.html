@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Rental Details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="existing"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-slides pager = "true">
+        <ion-slide>
+            <img src={{listing?.imgUrl}} />
+        </ion-slide>
+      </ion-slides>
+  {{listing?.name}} <br>
+  {{listing?.location}} <br>
+  {{listing?.description}}<br>
+  {{listing?.price}}<br>
+  <ion-button (click)="edit()"> Edit Property</ion-button>
+  <ion-button (click)="navToBookings()"> Bookings</ion-button>
+</ion-card>
+</ion-content>

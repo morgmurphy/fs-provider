@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+<ion-content>
+  <div class="ion-padding">
+    Hi my name is {{firstName}} {{lastName}} <br>
+    Info: {{email}} <br>
+    <ion-button (click)="navToNew()"> New Listing</ion-button>
+    <!-- <ion-button (click)="navToRentalDetails()"> Rental Details</ion-button>
+    <ion-button (click)="navToUpdateRental()"> Update Rental</ion-button> -->
+    <ion-button (click)="navToExisting()"> Existing Rentals</ion-button>
+  </div>
+</ion-content>

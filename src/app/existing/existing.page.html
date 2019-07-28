@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Existing</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-button (click)="navToNew()"> New</ion-button>
+    <ion-button (click)="navToProfile()"> Profile</ion-button>
+    <p>Below is a list of existing properties!</p>
+    <div *ngFor="let listing of listings" (click)="findPropertyById(listing.id)">
+      <ion-card align = "center">
+        <ion-slides pager = "true">
+          <ion-slide *ngFor = "let img of listing.imgUrl">
+              <img src={{img}} />
+          </ion-slide>
+        </ion-slides>
+        <b>{{listing.name}}</b> <br>
+        {{listing.location}}<br>
+        <!-- {{listing.description}}<br>
+        R{{listing.price}}/night <br> -->
+      </ion-card>
+    </div>
+    <ion-button (click)="navToNew()"> New</ion-button>
+    <ion-button (click)="navToProfile()"> Profile</ion-button>
+</ion-content>

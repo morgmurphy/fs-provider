@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Booking Requests</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="profile"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let booking of bookings" (click)="findPropertyById(listing.id)">
+        <ion-card align = "center">
+          Date from: {{booking.date_from}} <br>
+          Date to: {{booking.date_to}}<br>
+          Booking Status: {{booking.status}} <br>
+          <ion-button (click)="reject()"> Reject Booking Request</ion-button>
+          <ion-button (click)="accept()"> Accept Booking Request</ion-button>
+        </ion-card>
+      </div>
+</ion-content>
